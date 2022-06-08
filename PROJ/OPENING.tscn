@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://data/movies/OPENING.ogv" type="VideoStream" id=1]
+[ext_resource path="res://PROJ/OPENING.gd" type="Script" id=2]
+[ext_resource path="res://PROJ/OPENINGSKIP.gd" type="Script" id=3]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="OPENINGSKIP" type="CanvasLayer" parent="."]
+script = ExtResource( 3 )
+
+[node name="OPENING" type="VideoPlayer" parent="OPENINGSKIP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+stream = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
