@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://data/lvl/EP03/lvl2/episode3lvl2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://data/STREAM/STREEP3LVL2/STWind.ogg" type="AudioStream" id=2]
+[ext_resource path="res://PROJ/AudioStreamPlayerSTWind.gd" type="Script" id=3]
+[ext_resource path="res://data/lvl/EP03/lvl2/tornade00129/tornade00129.glb" type="PackedScene" id=4]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+ambient_light_color = Color( 1, 1, 1, 1 )
+fog_enabled = true
+fog_color = Color( 0.839216, 0.913725, 0.521569, 1 )
+fog_depth_begin = 0.0
+fog_depth_end = 75.0
+
+[sub_resource type="BoxShape" id=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="episode3lvl2" parent="." instance=ExtResource( 1 )]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="AudioStreamPlayerSTWind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 257.019, 3.08403, 274.326 )
+near = 0.01
+far = 1000.0
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 11.8179, 0, 0, 0, 4.92735, 0, 0, 0, 0.32196, 260.564, 5.1367, 297.157 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance5" type="MeshInstance" parent="."]
+transform = Transform( 1.48851, 0, -0.288016, 0, 3.30342, 0, 2.97937, 0, 0.143894, 227.739, 3.63699, 297.31 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance5/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance2" type="MeshInstance" parent="."]
+transform = Transform( 3.88747, 0, 0, 0, 4.92735, 0, 0, 0, 1, 242.291, 5.34951, 297.404 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance2/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance4" type="MeshInstance" parent="."]
+transform = Transform( 1.0068, 0, 0.19865, 0, 4.92735, 0, -0.204067, 0, 0.980071, 237.453, 5.31096, 297.404 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance4/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="MeshInstance3" type="MeshInstance" parent="."]
+transform = Transform( 7.28581, 0, 0.396331, 0, 4.92735, 0, -3.14516, 0, 0.918108, 229.523, 5.21228, 299.971 )
+
+[node name="StaticBody" type="StaticBody" parent="MeshInstance3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="MeshInstance3/StaticBody"]
+shape = SubResource( 2 )
+
+[node name="main_enemie" type="Spatial" parent="."]
+
+[node name="tornade00129" parent="main_enemie" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 258.105, -3.25489, 221.105 )
