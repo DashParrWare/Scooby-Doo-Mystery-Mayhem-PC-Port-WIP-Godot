@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/STWind.ogg-e7b7c6aa24bbd0da39cd4f065bd49a57.oggstr"
+
+[deps]
+
+source_file="res://data/STREAM/STREEP3LVL2/STWind.ogg"
+dest_files=[ "res://.import/STWind.ogg-e7b7c6aa24bbd0da39cd4f065bd49a57.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/MUEP4L2B.ogg-d56a2decc443e1689b0cbce04c41ae58.oggstr"
+
+[deps]
+
+source_file="res://data/STREAM/STREEP4LVL2B/MUEP4L2B.ogg"
+dest_files=[ "res://.import/MUEP4L2B.ogg-d56a2decc443e1689b0cbce04c41ae58.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
